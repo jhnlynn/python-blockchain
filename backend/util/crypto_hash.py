@@ -14,10 +14,10 @@ def crypto_hash(*args):
     # should encrypt to the same result
     json_args = sorted(map(lambda data: json.dumps(data), args))
 
-    print(f'args: {json_args}')
+    # print(f'args: {json_args}')
     joined_data = ''.join(json_args)
 
-    print(f'joined_data: {joined_data}')
+    # print(f'joined_data: {joined_data}')
 
     return hashlib.sha256(joined_data.encode('utf-8')).hexdigest()
 
